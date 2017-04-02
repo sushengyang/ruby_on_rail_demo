@@ -1,0 +1,166 @@
+<%= form_for(@loan) do |f| %>
+  <% if loan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(loan.errors.count, "error") %> prohibited this loan from being saved:</h2>
+
+      <ul>
+      <% loan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <h2>Basic Info</h2>
+
+  <div class="field">
+    <%= f.label :Assistant %>
+    <%= f.text_field :Assistant %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Manager %>
+    <%= f.text_field :Manager %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Processor %>
+    <%= f.text_field :Processor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Escrow %>
+    <%= f.text_field :Escrow %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Creator %>
+    <%= f.text_field :Creator %>
+  </div>
+
+  
+ <h2>Related Dates</h2>
+  <%= f.fields_for :related_date do |ff| %>
+ 
+    <div class="field">
+      <%= ff.label :Create_Date %>
+      <%= ff.date_select :Create_Date %>
+    </div>
+
+    <div class="field">
+      <%= ff.label :Open_Date %>
+      <%= ff.date_select :Open_Date %>
+    </div>
+
+    <div class="field">
+      <%= ff.label :Est_Closing_Date %>
+      <%= ff.date_select :Est_Closing_Date %>
+    </div>
+
+    <div class="field">
+      <%= ff.label :Escrow_Open_Date %>
+      <%= ff.date_select :Escrow_Open_Date %>
+    </div>
+
+    <div class="field">
+      <%= ff.label :Prelim_Date %>
+      <%= ff.date_select :Prelim_Date %>
+    </div>
+
+    <div class="field">
+      <%= ff.label :Appraisal_Date %>
+      <%= ff.date_select :Appraisal_Date %>
+    </div>
+
+    <div class="field">
+      <%= ff.label :Inspection_Date %>
+      <%= ff.date_select :Inspection_Date %>
+    </div>
+
+    <div class="field">
+      <%= ff.label :Generate_Closing_Instruction %>
+      <%= ff.text_area :Generate_Closing_Instruction %>
+    </div>
+
+    <div class="field">
+      <%= ff.label :Order_Loan_Doc_Date %>
+      <%= ff.date_select :Order_Loan_Doc_Date %>
+    </div>
+
+    <div class="field">
+      <%= ff.label :Closing_Date %>
+      <%= ff.date_select :Closing_Date %>
+    </div>
+
+    <div class="field">
+      <%= ff.label :Sch_To_Refine_Date %>
+      <%= ff.date_select :Sch_To_Refine_Date %>
+    </div>
+
+  <% end %>
+
+  <h2> Borrower Info</h2>
+  <%= f.fields_for :borrower do |bb| %>
+    <div class="field">
+      <%= bb.label :Name %>
+      <%= bb.text_field :Name %>
+    </div>
+
+    <div class="field">
+      <%= bb.label :Nickname %>
+      <%= bb.text_field :Nickname %>
+    </div>
+
+    <div class="field">
+      <%= bb.label :Mailing_Address %>
+      <%= bb.text_field :Mailing_Address %>
+    </div>
+
+    <div class="field">
+      <%= bb.label :Email %>
+      <%= bb.text_field :Email %>
+    </div>
+
+    <div class="field">
+      <%= bb.label :Phone %>
+      <%= bb.text_field :Phone %>
+    </div>
+
+    <div class="field">
+      <%= bb.label :Identity %>
+      <%= bb.text_field :Identity %>
+    </div>
+
+    <div class="field">
+      <%= bb.label :Driver_License %>
+      <%= bb.text_field :Driver_License %>
+    </div>
+
+    <div class="field">
+      <%= bb.label :SSN %>
+      <%= bb.number_field :SSN %>
+    </div>
+
+    <div class="field">
+      <%= bb.label :Credit_Score %>
+      <%= bb.number_field :Credit_Score %>
+    </div>
+
+    <div class="field">
+      <%= bb.label :Passport %>
+      <%= bb.text_field :Passport %>
+    </div>
+
+    <div class="field">
+      <%= bb.label :Visa %>
+      <%= bb.text_field :Visa %>
+    </div>
+  <% end %>
+ 
+
+  <div class="actions" align = 'center'>
+    <%= f.submit %>
+  </div>
+
+<% end %>
+

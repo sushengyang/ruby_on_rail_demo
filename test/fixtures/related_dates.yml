@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Create_Date: 2017-04-01
+  Open_Date: 2017-04-01
+  Est_Closing_Date: 2017-04-01
+  Escrow_Open_Date: 2017-04-01
+  Prelim_Date: 2017-04-01
+  Appraisal_Date: 2017-04-01
+  Inspection_Date: 2017-04-01
+  Generate_Closing_Instruction: MyText
+  Order_Loan_Doc_Date: 2017-04-01
+  Closing_Date: 2017-04-01
+  Sch_To_Refine_Date: 2017-04-01
+
+two:
+  Create_Date: 2017-04-01
+  Open_Date: 2017-04-01
+  Est_Closing_Date: 2017-04-01
+  Escrow_Open_Date: 2017-04-01
+  Prelim_Date: 2017-04-01
+  Appraisal_Date: 2017-04-01
+  Inspection_Date: 2017-04-01
+  Generate_Closing_Instruction: MyText
+  Order_Loan_Doc_Date: 2017-04-01
+  Closing_Date: 2017-04-01
+  Sch_To_Refine_Date: 2017-04-01

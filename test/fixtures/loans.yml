@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Loan_number: 1
+  Assistant: MyString
+  Manager: MyString
+  Processor: MyString
+  Escrow: MyString
+  Creator: MyString
+
+two:
+  Loan_number: 1
+  Assistant: MyString
+  Manager: MyString
+  Processor: MyString
+  Escrow: MyString
+  Creator: MyString
