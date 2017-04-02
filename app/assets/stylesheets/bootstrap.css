@@ -1,0 +1,6 @@
+@import "bootstrap";
+@import "site";
+
+.bootstrap-welcome {
+  padding-top: 5em;
+}

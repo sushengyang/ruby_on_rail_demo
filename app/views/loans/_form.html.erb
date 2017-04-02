@@ -101,6 +101,18 @@
 
   <h2> Borrower Info</h2>
   <%= f.fields_for :borrower do |bb| %>
+     <% if @borrower.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@borrower.errors.count, "error") %> prohibited this borrower from being saved:</h2>
+
+        <ul>
+        <% @borrower.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
     <div class="field">
       <%= bb.label :Name %>
       <%= bb.text_field :Name %>
